@@ -26,4 +26,5 @@ cp $BUILD_DIR/libSDL2.a $NDK_ADDON_PREFIX/lib || exit 1
 mkdir -p $NDK_ADDON_PREFIX/include/SDL2
 cp $SRC_DIR/include/*.h $NDK_ADDON_PREFIX/include/SDL2 || exit 1
 
+# Install our pre-made sdl2-config
 cp $THIS_DIR/sdl2-config $NDK_ADDON_PREFIX/bin || exit 1
