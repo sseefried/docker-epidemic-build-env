@@ -79,3 +79,26 @@ ADD scripts/download-libvorbis.sh $BASE/
 RUN ./download-libvorbis.sh
 ADD scripts/build-libvorbis.sh $BASE/
 RUN ./build-libvorbis.sh
+
+#
+# Download SDL2 and SDL2_mixer
+#
+ADD scripts/clone-SDL2-mobile.sh $BASE/
+RUN ./clone-SDL2-mobile.sh
+ADD scripts/clone-SDL2_mixer-mobile.sh $BASE/
+RUN ./clone-SDL2_mixer-mobile.sh
+ADD scripts/sdl2-config $BASE/
+
+#
+# Build SDL2
+#
+
+ADD scripts/build-SDL2-mobile.sh $BASE/
+RUN ./build-SDL2-mobile.sh
+
+#
+# Build SDL2_mixer
+#
+
+ADD scripts/build-SDL2_mixer-mobile.sh $BASE/
+RUN ./build-SDL2_mixer-mobile.sh

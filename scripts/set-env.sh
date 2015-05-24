@@ -9,7 +9,7 @@
 PLATFORM_PREFIX=$HOME/.ghc/android-14/arm-linux-androideabi-4.8
 NDK_ADDON_PREFIX=$PLATFORM_PREFIX/sysroot/usr
 
-export PATH=$PATH:$PLATFORM_PREFIX/bin
+export PATH=$PATH:$PLATFORM_PREFIX/bin:$NDK_ADDON_PREFIX/bin
 
 # Basic configuration
 export MAKEFLAGS=${MAKEFLAGS:--j9}
