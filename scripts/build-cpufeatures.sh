@@ -8,8 +8,6 @@ mkdir -p cpufeatures
 cd cpufeatures
 cp $NDK_PATH/sources/android/cpufeatures/* .
 
-echo $PATH
-
 $HOST-gcc -c cpu-features.c && \
   $HOST-ar cr libcpufeatures.a cpu-features.o && \
   cp libcpufeatures.a $NDK_ADDON_PREFIX/lib && \

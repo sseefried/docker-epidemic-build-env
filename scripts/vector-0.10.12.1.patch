@@ -1,0 +1,12 @@
+--- Data/Vector/Fusion/Stream/Monadic.hs  2015-05-25 11:23:12.488352866 +0000
++++ Data/Vector/Fusion/Stream/Monadic.hs.new  2015-05-25 11:23:31.137299155 +0000
+@@ -100,9 +100,6 @@
+ #include "vector.h"
+
+ data SPEC = SPEC | SPEC2
+-#if __GLASGOW_HASKELL__ >= 700
+-{-# ANN type SPEC ForceSpecConstr #-}
+-#endif
+
+ emptyStream :: String
+ {-# NOINLINE emptyStream #-}

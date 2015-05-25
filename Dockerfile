@@ -102,3 +102,35 @@ RUN ./build-SDL2-mobile.sh
 
 ADD scripts/build-SDL2_mixer-mobile.sh $BASE/
 RUN ./build-SDL2_mixer-mobile.sh
+
+
+#
+# Cabal install text-1.2.0.0
+#
+
+ADD scripts/cabal-install-text.sh $BASE/
+RUN ./cabal-install-text.sh
+
+#
+# Cabal install vector-0.10.12.1
+#
+
+ADD scripts/cabal-install-vector.sh $BASE/
+ADD scripts/vector-0.10.12.1.patch $BASE/
+RUN ./cabal-install-vector.sh
+
+#
+# Add cabal setup wrapper
+#
+
+ADD scripts/arm-linux-androideabi-cabal-setup.sh /home/androidbuilder/.ghc/android-14/arm-linux-androideabi-4.8/bin/
+
+#
+# Clone & build hsSDL2
+#
+
+ADD scripts/clone-hsSDL2.sh $BASE/
+RUN ./clone-hsSDL2.sh
+ADD scripts/build-hsSDL2.sh $BASE/
+RUN ./build-hsSDL2.sh
+
