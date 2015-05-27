@@ -87,7 +87,6 @@ ADD scripts/clone-SDL2-mobile.sh $BASE/
 RUN ./clone-SDL2-mobile.sh
 ADD scripts/clone-SDL2_mixer-mobile.sh $BASE/
 RUN ./clone-SDL2_mixer-mobile.sh
-ADD scripts/sdl2-config $BASE/
 
 #
 # Build SDL2
@@ -133,4 +132,55 @@ ADD scripts/clone-hsSDL2.sh $BASE/
 RUN ./clone-hsSDL2.sh
 ADD scripts/build-hsSDL2.sh $BASE/
 RUN ./build-hsSDL2.sh
+
+#
+# Clone & build hs-sdl2-mixer
+#
+
+ADD scripts/clone-hs-sdl2-mixer.sh $BASE/
+RUN ./clone-hs-sdl2-mixer.sh
+ADD scripts/build-hs-sdl2-mixer.sh $BASE/
+RUN ./build-hs-sdl2-mixer.sh
+
+
+#
+# cabal install gtk2hs-buildtoosa (for host compiler)
+#
+
+ADD scripts/cabal-install-gtk2hs-buildtools.sh $BASE/
+RUN ./cabal-install-gtk2hs-buildtools.sh
+
+#
+# Build hs-cairo dependencies
+#
+
+ADD scripts/cabal-install-hs-cairo-dependencies.sh $BASE/
+RUN ./cabal-install-hs-cairo-dependencies.sh
+
+#
+# Build Cairo Haskell binding
+#
+
+ADD scripts/clone-hs-cairo.sh $BASE/
+RUN ./clone-hs-cairo.sh
+ADD scripts/build-hs-cairo.sh $BASE/
+RUN ./build-hs-cairo.sh
+
+#
+# Build Haskell Chipmunk binding, Hipmunk
+#
+
+ADD scripts/clone-Hipmunk.sh $BASE/
+RUN ./clone-Hipmunk.sh
+ADD scripts/build-Hipmunk.sh $BASE/
+RUN ./build-Hipmunk.sh
+
+#
+# Build Epidemic!
+#
+
+ADD scripts/clone-epidemic-game.sh $BASE/
+RUN ./clone-epidemic-game.sh
+ADD scripts/build-epidemic-game.sh $BASE/
+RUN ./build-epidemic-game.sh
 

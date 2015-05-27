@@ -32,6 +32,7 @@ shift
 ARCH=arm-linux-androideabi
 GHC_PREFIX=arm-unknown-linux-androideabi
 BUILDDIR=dist/$ARCH
+PLATFORM_PREFIX=/home/androidbuilder/.ghc/android-14/arm-linux-androideabi-4.8
 
 case $ARG in
   clean)
@@ -48,8 +49,8 @@ case $ARG in
       --with-hc-pkg=$GHC_PREFIX-ghc-pkg \
       --with-strip=$ARCH-strip \
       --hsc2hs-options=--cross-compile \
-      --prefix=/home/androidbuilder/.ghc/android-14/arm-linux-androideabi-4.8/cabal \
-      --package-db=user \
+      --prefix=$PLATFORM_PREFIX/cabal \
+      --package-db=$PLATFORM_PREFIX/lib/arm-unknown-linux-androideabi-ghc-7.8.3/package.conf.d \
       "$@"
   ;;
 
