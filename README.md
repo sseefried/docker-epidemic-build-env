@@ -8,9 +8,9 @@ This way we increase the likelihood that the Docker will complete the build into
 
 ## Why so many small scripts?
 
-Apart from logically structuring the `Dockerfile` so that each library is built in isolation, this
-also means I can take advantage of Docker's cache which is a form of filesystem checkpointing. See
-the next question.
+I call these *scriptlets*. Apart from logically structuring the `Dockerfile` so that each library is
+built in isolation, this also means I can take advantage of Docker's cache which is a form of
+filesystem checkpointing. See the next question.
 
 ## Why do you `ADD` a script just before `RUN`nning it?
 

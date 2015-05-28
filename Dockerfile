@@ -7,23 +7,39 @@ RUN mkdir -p $BASE
 WORKDIR $BASE
 
 #
+# Install ant
+#
+
+USER root
+
+RUN apt-get install ant openjdk-6-jdk -y
+RUN wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+RUN cd .. && tar xzf build/android-sdk_r24.2-linux.tgz
+RUN chown -R androidbuilder:androidbuilder /home/androidbuilder/android-sdk-linux
+
+# Switch back to androidbuilder user
+USER androidbuilder
+
+#
 # Add environment script
 #
 ADD scripts/set-env.sh $BASE/
+
+#
+# Install Android SDK platform tools, build tools and API
+#
+ADD scripts/install-android-sdk-platform-tools.sh $BASE/
+RUN ./install-android-sdk-platform-tools.sh
+ADD scripts/install-android-sdk-build-tools.sh $BASE/
+RUN ./install-android-sdk-build-tools.sh
+ADD scripts/install-android-api-12.sh $BASE/
+RUN ./install-android-api-12.sh
 
 #
 # Build cpufeatures library
 #
 ADD scripts/build-cpufeatures.sh $BASE/
 RUN ./build-cpufeatures.sh
-
-#
-# Build zlib
-#
-# ADD scripts/download-zlib.sh $BASE/
-# RUN ./download-zlib.sh $BASE/
-# ADD scripts/build-zlib.sh $BASE/
-# RUN ./build-zlib.sh
 
 #
 # Build libpng
@@ -185,11 +201,8 @@ ADD scripts/build-OpenGLRaw.sh $BASE/
 RUN ./build-OpenGLRaw.sh
 
 #
-# Build Epidemic!
+# Clone Epidemic
 #
 
 ADD scripts/clone-epidemic-game.sh $BASE/
 RUN ./clone-epidemic-game.sh
-ADD scripts/build-epidemic-game.sh $BASE/
-RUN ./build-epidemic-game.sh
-
