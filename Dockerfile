@@ -151,7 +151,7 @@ ADD scripts/cabal-install-gtk2hs-buildtools.sh $BASE/
 RUN ./cabal-install-gtk2hs-buildtools.sh
 
 #
-# Build hs-cairo dependencies
+# Build all epidemic dependencies
 #
 
 ADD scripts/cabal-install-hs-cairo-dependencies.sh $BASE/
@@ -174,6 +174,15 @@ ADD scripts/clone-Hipmunk.sh $BASE/
 RUN ./clone-Hipmunk.sh
 ADD scripts/build-Hipmunk.sh $BASE/
 RUN ./build-Hipmunk.sh
+
+#
+# Build OpenGLRaw
+#
+
+ADD scripts/clone-OpenGLRaw.sh $BASE/
+RUN ./clone-OpenGLRaw.sh
+ADD scripts/build-OpenGLRaw.sh $BASE/
+RUN ./build-OpenGLRaw.sh
 
 #
 # Build Epidemic!
