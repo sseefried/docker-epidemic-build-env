@@ -32,7 +32,7 @@ at 1.1G.
 
 Follow the instruction in the `README.md` [here](https://github.com/sseefried/docker-build-ghc-android).
 
-Once you done that you'll need to tag the resulting image as `sseefried/debian-wheezy-ghc-android`
+Once you've done that you'll need to tag the resulting image as `sseefried/debian-wheezy-ghc-android`
 locally to build the image this `Dockerfile` specifies.
 
 ### Build with Docker
@@ -41,9 +41,9 @@ At the command line simply type:
 
     $ docker build .
 
-This will take a while to build. First it must download the Docker image
-`sseefried/debian-wheezy-ghc-android` (about 1.1G) and then must download, clone and build
-a bunch of libraries. Go get a coffee, drink it, go for a long walk and then come back.
+This will take a while to build. First, unless you performed the previous step, Docker must download
+the image `sseefried/debian-wheezy-ghc-android` (about 1.1G). It will then download, clone and build
+a bunch of libraries. Go get a coffee, drink it slowly, go for a long walk and then come back.
 Once it's finished type:
 
     $ docker images
@@ -54,7 +54,7 @@ You will get something like:
     <none>                                <none>              3b16cf90e485        6 minutes ago       5.923 GB
     ...
 
-If you want you can tag the image with something memorable like:
+You can tag the image with something memorable like:
 
     docker tag <image id> epidemic-build-env
 
@@ -104,7 +104,7 @@ Now, inside the interactive shell in the running container, follow the instructi
 `README.md` [here](https://github.com/sseefried/android-build-epidemic-apk)
 
 Once you are done the APK will be in `/local/path/to/android-build-epidemic-apk/bin`, and
-you can install it at will with:
+you can install it with:
 
      $ adb install -r com.declarative.games.epidemic.beta-debug.apk
 
@@ -113,8 +113,8 @@ you can install it at will with:
 Here I outline some of the guiding principles behind the design of the `Dockerfile`.
 
 * Download specific versions of libraries. Check them against a SHA1 hash.
-* cabal install specific versions of libraries
-* git clone specific commits of repositories
+* `cabal install` specific versions of libraries
+* `git clone` specific commits of repositories
 
 This way we increase the likelihood that Docker will complete the build into the future.
 
@@ -122,7 +122,9 @@ This way we increase the likelihood that Docker will complete the build into the
 
 I call these *scriptlets*. Apart from logically structuring the `Dockerfile` so that each library is
 built in isolation, this also means I can take advantage of Docker's cache which is a form of
-filesystem checkpointing. See the next question.
+filesystem checkpointing. See a blog
+[post](http://lambdalog.seanseefried.com/posts/2014-12-12-docker-build-scripts.html) I wrote on
+this. Also see the next question.
 
 ### Why do you `ADD` a script just before `RUN`ning it?
 
