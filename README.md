@@ -117,7 +117,7 @@ Here I outline some of the guiding principles behind the design of the `Dockerfi
 * cabal install specific versions of libraries
 * git clone specific commits of repositories
 
-This way we increase the likelihood that the Docker will complete the build into the future.
+This way we increase the likelihood that Docker will complete the build into the future.
 
 ### Why so many small scripts?
 
