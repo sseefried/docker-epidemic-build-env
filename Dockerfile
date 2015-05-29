@@ -206,3 +206,10 @@ RUN ./build-OpenGLRaw.sh
 
 ADD scripts/clone-epidemic-game.sh $BASE/
 RUN ./clone-epidemic-game.sh
+
+#
+# Clone android-build-epidemic-apk
+#
+
+ADD scripts/clone-android-build-epidemic-apk.sh $BASE/
+RUN ./clone-android-build-epidemic-apk.sh
