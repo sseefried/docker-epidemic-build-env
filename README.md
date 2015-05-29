@@ -12,7 +12,7 @@ various C libraries and then build cross-compiled versions of all the Haskell li
 unfortunately, doesn't work out of the box for some libraries when installing them with
 [Cabal](https://www.haskell.org/cabal/).
 
-So, with tha aid of [Docker](https://www.docker.com) I wrote a Dockerfile to build a fully
+So, with the aid of [Docker](https://www.docker.com) I wrote a Dockerfile to build a fully
 fledged Android build environment. This builds on earlier work that I did in the
 [`docker-build-ghc-android`](https://github.com/sseefried/docker-build-ghc-android) repo.
 `docker-build-ghc-android` just builds a GHC 7.8.3 cross-compiler targetting ARMv7, while this
