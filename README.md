@@ -125,7 +125,7 @@ I call these *scriptlets*. Apart from logically structuring the `Dockerfile` so 
 built in isolation, this also means I can take advantage of Docker's cache which is a form of
 filesystem checkpointing. See the next question.
 
-### Why do you `ADD` a script just before `RUN`nning it?
+### Why do you `ADD` a script just before `RUN`ning it?
 
 This made developing this build script that much easier. While developing a specific *scriptlet* I
 didn't want to have to build from the beginning each time a made a small change. Docker's caching of
