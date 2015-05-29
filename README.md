@@ -30,6 +30,8 @@ You probably only want to do this if for some reason you can't download
 [Docker Hub](https://registry.hub.docker.com/search?q=library) registry. It's rather large
 at 1.1G.
 
+Follow the instruction in the `README.md` [here](https://github.com/sseefried/docker-build-ghc-android).
+
 ### Build with Docker
 
 At the command line simply type:
