@@ -70,11 +70,10 @@ You can simply run an interactive shell and build the APK inside a running conta
 
 Now follow the instructions in the `README.md` [here](https://github.com/sseefried/android-build-epidemic-apk)
 
-The `adb` tool is not installed in the image so once you have built the APK you will want to exit
-out of the running container and then copy the APK to your local machine (which presumably has `adb`
-installed in it).
+The `adb` tool is not installed in the image so once you have built the APK you will want to
+copy the APK to your local machine (which presumably has `adb` installed in it).
 
-In a fresh shell (in another terminal window) type:
+Keep the container running. In a fresh shell (in another terminal window) type:
 
      $ docker ps
 
