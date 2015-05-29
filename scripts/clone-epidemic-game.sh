@@ -5,6 +5,6 @@ source $THIS_DIR/set-env.sh
 ####################################################################################################
 
 
-git clone https://github.com/sseefried/epidemic-game.git
-cd epidemic-game
-git checkout dc9c8845c49cc9f56edc2a52c7501d849fbec9e9 2>&1
+git clone https://github.com/sseefried/open-epidemic-game.git
+cd open-epidemic-game
+git checkout ae30300f93fa559d0f677247edbe1745a74d99b8 2>&1
