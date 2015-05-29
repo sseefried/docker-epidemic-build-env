@@ -128,7 +128,7 @@ filesystem checkpointing. See the next question.
 ### Why do you `ADD` a script just before `RUN`ning it?
 
 This made developing this build script that much easier. While developing a specific *scriptlet* I
-didn't want to have to build from the beginning each time a made a small change. Docker's caching of
+didn't want to have to build from the beginning each time I made a small change. Docker's caching of
 sub-images meant that I could start building again from the point where a scriptlet changed and know
 with 100% certainty that the filesystem was in *exactly* the same state it was the last time I tried
 to build from that point. As a consequence the structure of "adding before running" also makes this
