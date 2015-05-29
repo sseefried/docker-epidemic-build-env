@@ -32,6 +32,9 @@ at 1.1G.
 
 Follow the instruction in the `README.md` [here](https://github.com/sseefried/docker-build-ghc-android).
 
+Once you done that you'll need to tag the resulting image as `sseefried/debian-wheezy-ghc-android`
+locally to build the image this `Dockerfile` specifies.
+
 ### Build with Docker
 
 At the command line simply type:
