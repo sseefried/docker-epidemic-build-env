@@ -113,7 +113,6 @@ you can install it with:
 Actually, the version of the game I've released will not be the final version. If you'd like
 to stay in the loop then subscribe below.
 
-```html
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -132,9 +131,6 @@ to stay in the loop then subscribe below.
     </div>
 </form>
 </div>
-```
-
-<!--End mc_embed_signup-->
 
 
 
