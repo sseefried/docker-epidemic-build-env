@@ -23,6 +23,8 @@ you can build an APK for installation on your Android device.
 
 ## Installation
 
+Please ensure that you are using at leaast Docker version 1.6. Check with `docker version`.
+
 ### (Optional) Build `debian-wheezy-ghc-android`
 
 You probably only want to do this if for some reason you can't download
@@ -112,9 +114,6 @@ you can install it with:
 
 Actually, the version of the game I've released will not be the final version. If you'd like
 to stay in the loop then [subscribe](http://eepurl.com/boW1vz) here.
-
-
-
 
 
 ## Guiding principles of the Dockerfile
