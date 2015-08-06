@@ -3,7 +3,7 @@
 ## Introduction
 
 [Epidemic](https://github.com/sseefried/open-epidemic-game) is a game about exponential growth
-written in Haskell.
+written in Haskell. (Here's a [demo](https://www.youtube.com/watch?v=PkIhzVGIsxI) on YouTube.)
 
 But building it for mobile devices ain't that easy.
 
