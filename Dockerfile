@@ -12,6 +12,13 @@ WORKDIR $BASE
 
 USER root
 
+#
+# I live in Australia so change the mirror to one more appropriate
+# to where you live.
+#
+run echo "deb http://mirror.aarnet.edu.au/debian wheezy main" > /etc/apt/sources.list
+run echo "deb-src http://mirror.aarnet.edu.au/debian wheezy main" >> /etc/apt/sources.list
+RUN apt-get update
 RUN apt-get install ant openjdk-6-jdk -y
 RUN wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
 RUN cd .. && tar xzf build/android-sdk_r24.2-linux.tgz

@@ -23,7 +23,7 @@ you can build an APK for installation on your Android device.
 
 ## Installation
 
-Please ensure that you are using at leaast Docker version 1.6. Check with `docker version`.
+Please ensure that you are using at least Docker version 1.10. Check with `docker version`.
 
 ### (Optional) Build `debian-wheezy-ghc-android`
 
@@ -109,11 +109,6 @@ Once you are done the APK will be in `/local/path/to/android-build-epidemic-apk/
 you can install it with:
 
      $ adb install -r com.declarative.games.epidemic.beta-debug.apk
-
-## Want to help beta test the game?
-
-Actually, the version of the game I've released will not be the final version. If you'd like
-to stay in the loop then [subscribe](http://eepurl.com/boW1vz) here.
 
 
 ## Guiding principles of the Dockerfile
