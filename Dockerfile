@@ -208,15 +208,10 @@ ADD scripts/build-OpenGLRaw.sh $BASE/
 RUN ./build-OpenGLRaw.sh
 
 #
-# Clone Epidemic
+# Clone & build helm
 #
 
-ADD scripts/clone-epidemic-game.sh $BASE/
-RUN ./clone-epidemic-game.sh
-
-#
-# Clone android-build-epidemic-apk
-#
-
-ADD scripts/clone-android-build-epidemic-apk.sh $BASE/
-RUN ./clone-android-build-epidemic-apk.sh
+ADD scripts/clone-helm.sh $BASE/
+RUN ./clone-helm.sh
+ADD scripts/build-helm.sh $BASE/
+RUN ./build-helm.sh
