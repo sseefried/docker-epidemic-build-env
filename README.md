@@ -1,11 +1,8 @@
-# A `Dockerfile` for provisioning a build environment for Epidemic
+# A `Dockerfile` for provisioning a build environment for Haskell games on Android
 
 ## Introduction
 
-[Epidemic](https://github.com/sseefried/open-epidemic-game) is a game about exponential growth
-written in Haskell. (Here's a [demo](https://www.youtube.com/watch?v=PkIhzVGIsxI) on YouTube.)
-
-But building it for mobile devices ain't that easy.
+Building Haskell games for mobile devices, while possible, isn't that easy.
 
 Apart from requiring a [GHC](http://haskell.org/ghc) cross-compiler, you must cross-compile
 various C libraries and then build cross-compiled versions of all the Haskell libraries which,

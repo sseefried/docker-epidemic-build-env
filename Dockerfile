@@ -215,3 +215,13 @@ ADD scripts/clone-helm.sh $BASE/
 RUN ./clone-helm.sh
 ADD scripts/build-helm.sh $BASE/
 RUN ./build-helm.sh
+
+#
+# Install j2 command line tool
+#
+USER root
+
+RUN apt-get install -y python-pip
+RUN pip install j2cli
+
+USER androidbuilder
