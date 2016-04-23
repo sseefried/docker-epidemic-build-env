@@ -6,4 +6,4 @@ source $THIS_DIR/set-env.sh
 
 git clone https://github.com/sseefried/helm.git
 cd helm
-git checkout da5239162776e8572053ac2ca35c09bae6a4d13a 2>&1
+git checkout 7a715a7a3f8fb071879984bc8b7c0d0baabf6a37 2>&1
