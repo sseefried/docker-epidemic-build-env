@@ -1,5 +1,19 @@
 # A `Dockerfile` for provisioning a build environment for Epidemic
 
+# THIS REPO IS DEPRECATED
+
+**WHILE THESE INSTRUCTIONS WORK I NOW SUGGEST YOU USE THE INSTRUCTIONS IN
+  [docker-game-build-env](https://github.com/sseefried/docker-game-build-env).
+**
+
+This is particularly relevant advice for those who are attending the 
+"Writing Games for Android in Haskell" workshop at LambdaJam 2016 in
+Brisbane on 28/29 April 2016.
+
+Old instructions below this line...
+
+----
+
 ## Introduction
 
 [Epidemic](https://github.com/sseefried/open-epidemic-game) is a game about exponential growth
